@@ -3,6 +3,7 @@ import pandas as pd
 import os
 
 app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 # Função para corrigir as provas (sua lógica atual)
 def corrigir_provas(gabarito_path, respostas_path):
@@ -35,6 +36,14 @@ def corrigir_provas(gabarito_path, respostas_path):
 @app.route("/")
 def index():
     return render_template("index.html")
+
+#Rota para processar as imagens 
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 # Rota para receber os arquivos e processá-los
 @app.route("/upload", methods=["POST"])
