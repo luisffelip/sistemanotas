@@ -63,7 +63,7 @@
         }
 
         #img-final {
-            width: 350px;
+            width: 20rem;
             margin-top: 50px;
         }
 
@@ -102,8 +102,7 @@
         <button type="submit">Enviar</button>
     </form>
     <br>
-    <img src="{{ url_for('static', filename='images/nome-branco.png') }}" alt="Nome E-Interativo" id="img-final">
-
+    <img src="{{ url_for('static', filename='images/nome-branco.png') }}" alt="Nome E-Interativo" id="img-final"> 
     <script>
         document.querySelectorAll('input[type="file"]').forEach((inputElement) => {
             const fileNameElement = inputElement.parentElement.querySelector('.file-name'); // O <span> ao lado do input
