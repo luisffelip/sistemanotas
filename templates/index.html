@@ -64,7 +64,14 @@
 
         #img-final {
             width: 50%;
-            max-width: 25.5rem;
+            max-width: 20.5rem;
+            margin-top: 10px;
+        }
+
+        #img-final2 {
+            width: 20%;
+            max-width: 10.5rem;
+            margin-top: 10px;
             margin-top: 50px;
         }
 
@@ -103,7 +110,11 @@
         <button type="submit">Enviar</button>
     </form>
     <br>
-    <img src="{{ url_for('static', filename='images/nome-branco.png') }}" alt="Nome E-Interativo" id="img-final"> 
+    <!-- <img src="{{ url_for('static', filename='images/nome-branco.png') }}" alt="Nome E-Interativo" id="img-final">  -->
+    <!-- <img src="{{ url_for('static', filename='images/img.png') }}" alt="Nome E-Interativo" id="img-final">  -->
+    <img id="img-final2" src="../static/images/image.png" alt="">
+    <br>
+     <img src="../static/images/nome-branco.png" id="img-final" alt="">
     
     <script>
         document.querySelectorAll('input[type="file"]').forEach((inputElement) => {
