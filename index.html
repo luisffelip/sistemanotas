@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico">
+    <title>Sistema de Correção de Provas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 20px;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Correção de Provas</h1>
+    <p>Faça o upload do gabarito e das respostas dos alunos:</p>
+    <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <label for="gabarito">Arquivo do Gabarito:</label><br>
+        <input type="file" name="gabarito" id="gabarito" required><br>
+        <label for="respostas">Arquivo de Respostas:</label><br>
+        <input type="file" name="respostas" id="respostas" required><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
